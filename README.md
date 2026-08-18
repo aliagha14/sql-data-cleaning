@@ -21,6 +21,11 @@ The dataset contains client trading account information, including:
 
 The original CSV was intentionally created with various data quality issues to simulate a real-world messy dataset.
 
+## Data Files
+
+- `raw_clients.csv` — original dataset containing the deliberately introduced data quality issues.
+- `cleaned_clients.csv` — final dataset after the cleaning, standardization, and validation process.
+
 ## Data Quality Issues Identified
 
 The dataset contained several types of inconsistencies and errors:
@@ -160,6 +165,7 @@ The final schema was then inspected to verify that the data types were correctly
 sql-data-cleaning/
 ├── README.md
 ├── data/
-│   └── raw_clients.csv
+│   ├── cleaned_clients.csv
+│   └── raw_clients.csv 
 └── sql/
     └── data_cleaning.sql
