@@ -140,6 +140,9 @@ After the cleaning process was completed, the final table was inspected and the 
 - `ENUM`
 - `VARCHAR`
 
+### 10. Removed Unique Identifier
+- Removed the `id` column after completing the cleaning process as it was a unique identifier and was not needed for analysis.
+
 The final schema was then inspected to verify that the data types were correctly applied.
 
 ## SQL Techniques Used
