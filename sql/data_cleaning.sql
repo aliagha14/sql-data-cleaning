@@ -230,6 +230,9 @@ UPDATE traders_pnl.clients_clean
 SET most_traded_symbol = UPPER(most_traded_symbol)
 WHERE most_traded_symbol IS NOT NULL;
 
+-- Remove unique identifier
+ALTER TABLE clients
+DROP COLUMN id;
 
 -- Inspect clean table
 SELECT * 
@@ -244,11 +247,11 @@ MODIFY poi ENUM('Yes','No'),
 MODIFY registration_time DATETIME,
 MODIFY ib_id INT,
 MODIFY region VARCHAR(20),                
-MODIFY initial_deposit DECIMAL(12,2),
+MODIFY initial_deposit DECIMAL(12,1),
 MODIFY swap_free_status ENUM('Yes','No'),
-MODIFY pnl DECIMAL(12,2),
+MODIFY pnl DECIMAL(12,1),
 MODIFY nb_of_trades INT,
-MODIFY volume DECIMAL(18,6),
+MODIFY volume DECIMAL(18,5),
 MODIFY most_traded_symbol VARCHAR(20);
 
 -- Check final schema
